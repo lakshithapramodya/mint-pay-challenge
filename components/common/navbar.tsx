@@ -7,7 +7,7 @@ import SocialNav from "./social-nav";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between py-4">
+    <div className="flex items-center justify-between px-4 py-4 md:px-[47px] xl:px-24">
       <div className="flex items-center justify-center space-x-6">
         <div className="flex w-fit items-center justify-center space-x-2">
           <Image
@@ -25,7 +25,7 @@ const Navbar = () => {
       </div>
 
       <div className="flex w-fit items-center justify-center space-x-5 xl:space-x-6">
-        <SocialNav data={socialNavData} />
+        <SocialNav data={socialNavData} type="desktop" />
 
         <button className="border-primary text-primaryText flex w-[143px] items-start rounded-[23px] border border-solid px-6 py-2 text-sm">
           Download CV

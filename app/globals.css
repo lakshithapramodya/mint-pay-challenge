@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background-circles {
+  @apply border-primaryText/40 absolute ml-[110%] mt-[250px] rounded-full border opacity-30 md:ml-[115%] xl:mt-40;
+}
