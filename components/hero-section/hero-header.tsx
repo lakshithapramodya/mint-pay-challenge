@@ -4,9 +4,12 @@ const HeroHeader = () => {
   return (
     <div className="relative max-w-[240px] md:max-w-[520px]">
       <h1 className="text-primaryText flex flex-col text-[33.6px] font-light leading-[120%] md:text-7xl">
-        <span>Let’s learn</span>
-        <span>to code</span>
-        <span>an application</span>
+        Let’s learn
+        <br />
+        to code
+        <br />
+        an application
+        <br />
       </h1>
       <div className="absolute left-[125px] top-0 flex flex-col md:left-[285px] md:top-3 md:flex-col-reverse">
         <Image
