@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .background-circles {
-  @apply border-primaryText/40 absolute ml-[110%] mt-[250px] rounded-full border opacity-30 md:ml-[115%] xl:mt-40;
+  @apply border-primaryText/40 absolute ml-[calc(100%+50px)] mt-[250px] rounded-full border md:ml-[calc(100%+100px)] xl:ml-[calc(100%+200px)] xl:mt-40;
 }
