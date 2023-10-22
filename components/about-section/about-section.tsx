@@ -2,15 +2,15 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 
 import { personalData } from "@/data/personal-data";
+import { cn } from "@/lib/utils";
 
 import BackgroundCircles from "@/components/common/background-circles";
-import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const AboutSection = () => {
   return (
-    <section className="overflow-x-clip px-4 py-9 md:px-[47px] xl:px-24">
+    <section className="overflow-x-clip px-4 pb-24 pt-9 md:px-[47px] xl:px-24">
       <BackgroundCircles className="ml-[calc(100%-56px)] mt-20 md:ml-[calc(100%+100px)] md:mt-[550px] xl:-ml-[calc(100%+200px)] xl:mt-[400px]" />
 
       <div className="flex flex-col items-start space-y-8 md:space-y-12 xl:flex-row xl:justify-between xl:space-y-0">
