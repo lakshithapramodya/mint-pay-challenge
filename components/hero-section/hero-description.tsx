@@ -6,7 +6,7 @@ const HeroDescription = () => {
   return (
     <div className="md:flex md:items-center md:justify-between">
       <div className="space-y-8">
-        <p className="text-primaryText max-w-[325px] self-stretch leading-[160%] md:max-w-[350px]">
+        <p className="text-primaryText max-w-[343px] self-stretch leading-[160%] md:max-w-[374px]">
           with me <span className="text-primary">arif iskandar</span>, a
           software developer who loves to share how to code in many programing
           languages and multi platforms.

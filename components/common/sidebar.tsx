@@ -17,11 +17,15 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
   const handleOpen = () => {
     setOpen(true);
     document.body.style.overflow = "hidden";
+    document.body.style.transition = "background-color 0.5s ease";
+    document.body.style.backgroundColor = "rgb(57 63 72 / 0.2)";
   };
 
   const handleClose = () => {
     setOpen(false);
-    document.body.style.overflow = "auto";
+    document.body.style.removeProperty("overflow");
+    document.body.style.removeProperty("background-color");
+    document.body.style.removeProperty("transition");
   };
 
   return (
