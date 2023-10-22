@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
-import { Transition } from "@headlessui/react";
+import { Transition, Dialog } from "@headlessui/react";
 
 import BackgroundCircles from "./background-circles";
 import SidebarContent from "./sidebar-content";
@@ -16,37 +16,53 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 
   const handleOpen = () => {
     setOpen(true);
-    document.body.style.overflow = "hidden";
-    document.body.style.transition = "background-color 0.5s ease";
-    document.body.style.backgroundColor = "rgb(57 63 72 / 0.2)";
   };
 
   const handleClose = () => {
     setOpen(false);
-    document.body.style.removeProperty("overflow");
-    document.body.style.removeProperty("background-color");
-    document.body.style.removeProperty("transition");
   };
 
   return (
     <div>
       <div onClick={handleOpen}>{children}</div>
-      <Transition
-        className="fixed inset-0 z-50 flex items-start justify-start overflow-hidden overflow-y-hidden md:hidden"
-        show={open}
-        enter="transform transition ease-in-out duration-500"
-        enterFrom="-translate-x-full"
-        enterTo="translate-x-0"
-        leave="transform transition ease-in-out duration-500 delay-100"
-        leaveFrom="translate-x-0"
-        leaveTo="-translate-x-full"
-      >
-        <div className="relative h-screen w-[88%] overflow-hidden bg-white px-[37px]">
-          <BackgroundCircles className="-ml-[calc(100%+50px)] mt-[200vh]" />
 
-          <SidebarContent />
-        </div>
-        <div onClick={handleClose} className="h-screen w-[12%]" />
+      <Transition show={open} as={Fragment}>
+        <Dialog
+          unmount={false}
+          onClose={handleClose}
+          className="fixed inset-0 z-20 w-[88%] overflow-hidden"
+        >
+          <div className="flex h-screen">
+            <Transition.Child
+              as={Fragment}
+              enter="transition-opacity ease-in duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-20"
+              entered="opacity-20"
+              leave="transition-opacity ease-out duration-300"
+              leaveFrom="opacity-20"
+              leaveTo="opacity-0"
+            >
+              <Dialog.Overlay className="bg-primaryText fixed inset-0 z-0" />
+            </Transition.Child>
+
+            <Transition.Child
+              as={Fragment}
+              enter="transform transition ease-in-out duration-500"
+              enterFrom="-translate-x-full"
+              enterTo="translate-x-0"
+              leave="transform transition ease-in-out duration-500 delay-100"
+              leaveFrom="translate-x-0"
+              leaveTo="-translate-x-full"
+            >
+              <div className="relative h-screen w-full overflow-hidden bg-white px-[37px]">
+                <BackgroundCircles className="-ml-[calc(100%+50px)] mt-[200vh]" />
+
+                <SidebarContent />
+              </div>
+            </Transition.Child>
+          </div>
+        </Dialog>
       </Transition>
     </div>
   );
