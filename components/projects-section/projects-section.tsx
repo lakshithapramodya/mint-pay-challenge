@@ -11,7 +11,7 @@ const ProjectsSection = () => {
         ))}
       </div>
       <div className="relative z-10 w-full">
-        <button className="border-primary m-auto flex items-start rounded-[23px] border border-solid px-6 py-2">
+        <button className="border-primary hover:bg-primary m-auto flex items-start rounded-[23px] border border-solid px-6 py-2 transition duration-500 ease-in-out hover:scale-[0.97] hover:text-white">
           Load more
         </button>
       </div>

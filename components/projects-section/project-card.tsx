@@ -13,7 +13,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
   return (
-    <div className="mx-auto max-w-fit rounded-[32px] border-2 border-dashed border-neutral-200 p-3 md:p-4">
+    <div className="mx-auto max-w-fit cursor-pointer rounded-[32px] border-2 border-dashed border-neutral-200 p-3 transition duration-500 ease-in-out hover:scale-105 md:p-4">
       <div className="relative w-fit">
         <Image
           className="h-[245px] shrink-0 rounded-2xl object-cover"
