@@ -30,16 +30,16 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
         <Dialog
           unmount={false}
           onClose={handleClose}
-          className="fixed inset-0 z-20 w-[88%] overflow-hidden"
+          className="fixed inset-0 z-20 w-[88%]"
         >
           <div className="flex h-screen">
             <Transition.Child
               as={Fragment}
-              enter="transition-opacity ease-in duration-300"
+              enter="transition-opacity ease-in duration-500"
               enterFrom="opacity-0"
               enterTo="opacity-20"
               entered="opacity-20"
-              leave="transition-opacity ease-out duration-300"
+              leave="transition-opacity ease-out duration-500"
               leaveFrom="opacity-20"
               leaveTo="opacity-0"
             >
