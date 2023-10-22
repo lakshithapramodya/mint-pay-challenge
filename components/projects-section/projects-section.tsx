@@ -4,7 +4,7 @@ import ProjectCard from "./project-card";
 
 const ProjectsSection = () => {
   return (
-    <section className="space-y-3 px-4 md:px-[47px] xl:px-24">
+    <section className="space-y-3 px-4 pb-9 md:px-[47px] xl:px-24">
       <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3 xl:gap-9 [&>*:nth-child(n+4)]:hidden md:[&>*:nth-child(n+4)]:grid md:[&>*:nth-child(n+5)]:hidden xl:[&>*:nth-child(n+5)]:grid">
         {projectsData.map((project) => (
           <ProjectCard key={project.id} data={project} />
