@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HeroHeader = () => {
   return (
-    <div className="relative max-w-[240px] md:max-w-[520px]">
+    <div className="relative max-w-[250px] md:max-w-[550px]">
       <h1 className="text-primaryText flex flex-col text-[33.6px] font-light leading-[120%] md:text-7xl">
         Let’s learn
         <br />
@@ -11,7 +11,7 @@ const HeroHeader = () => {
         an application
         <br />
       </h1>
-      <div className="absolute left-[125px] top-0 flex flex-col md:left-[285px] md:top-3 md:flex-col-reverse">
+      <div className="absolute left-[135px] top-0 flex flex-col md:left-[300px] md:top-3 md:flex-col-reverse">
         <Image
           className="mb-[6px] ml-10 w-9 object-contain md:mb-0 md:ml-0 md:w-14"
           src="images/icons/subtasks-icon.svg"
