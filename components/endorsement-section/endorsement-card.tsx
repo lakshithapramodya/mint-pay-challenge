@@ -33,9 +33,9 @@ const EndorsementCard: React.FC<EndorsementCardProps> = ({ item }) => {
               height="100"
             />
             <div className="space-y-[2px]">
-              <h4 className="text-primaryText self-stretch text-base leading-[150%]">
+              <p className="text-primaryText self-stretch text-base leading-[150%]">
                 {data.name}
-              </h4>
+              </p>
               <span className="text-primary line-clamp-1 h-6 self-stretch text-sm leading-[150%]">
                 {item.position}
               </span>
