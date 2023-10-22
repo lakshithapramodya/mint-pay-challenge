@@ -1,4 +1,5 @@
 import AboutSection from "@/components/about-section/about-section";
+import BottomSection from "@/components/bottom-section/bottom-section";
 import Container from "@/components/common/container";
 import Navbar from "@/components/common/navbar";
 import EndorsementSection from "@/components/endorsement-section/endorsement-section";
@@ -13,6 +14,7 @@ export default function Home() {
       <ProjectsSection />
       <AboutSection />
       <EndorsementSection />
+      <BottomSection />
     </Container>
   );
 }
