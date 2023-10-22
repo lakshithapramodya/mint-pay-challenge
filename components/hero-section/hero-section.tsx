@@ -1,4 +1,4 @@
-import BackgroundCircles from "./background-circles";
+import BackgroundCircles from "@/components/common/background-circles";
 import HeroDescription from "./hero-description";
 import HeroHeader from "./hero-header";
 
