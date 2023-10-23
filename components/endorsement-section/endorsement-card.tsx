@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 interface EndorsementCardProps {
@@ -19,10 +20,13 @@ const EndorsementCard: React.FC<EndorsementCardProps> = ({ item }) => {
       {item.endorsements.map((data) => (
         <div
           key={data.id}
-          className="relative m-auto max-w-full space-y-6 rounded-[23px] border border-solid border-neutral-200 p-6"
+          className={cn(
+            "relative m-auto max-w-full space-y-6 rounded-[23px] border border-solid border-neutral-200 p-6",
+            data.id == 2 && "h-[236px]",
+          )}
         >
           {data.id == 2 && (
-            <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-white to-transparent " />
+            <div className="absolute left-0 top-0 h-[236px] w-full bg-gradient-to-t from-white to-transparent " />
           )}
           <div className="flex items-center space-x-4">
             <Image

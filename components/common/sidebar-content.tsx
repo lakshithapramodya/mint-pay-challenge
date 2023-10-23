@@ -9,7 +9,7 @@ const SidebarContent = () => {
     <div className="mt-[46px]">
       <Logo className="mb-[17.86px] py-[8.55px]" />
 
-      <div className="flex flex-col space-y-[8.55px]">
+      <nav className="flex flex-col space-y-[8.55px]">
         {mainNavData.map((item) => (
           <Link
             href={item.path}
@@ -19,7 +19,7 @@ const SidebarContent = () => {
             {item.title}
           </Link>
         ))}
-      </div>
+      </nav>
 
       <button className="bg-primary mt-[66.1px] inline-flex items-start rounded-[24.55px] px-[25.65px] py-[8.55px] text-white">
         Download CV
